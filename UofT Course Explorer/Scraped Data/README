@@ -1,4 +1,4 @@
-The 'Mined courses.json' file is the output file from scraper.py containing mined course data from ttb.utoronto.ca/. 
+The 'Mined courses.json' file is the output file from scraper.py containing mined course data from ttb.utoronto.ca/. 'Key Finder.py' is the python code to find the different level keys.
 
 ## Structure
 Array of course objects. Fields are inconsistent across courses - not every course has every key. All values are strings, with the exception of 'Lectures' which is an array of lecture objects containing lecture data.
