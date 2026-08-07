@@ -1,0 +1,47 @@
+The 'Mined courses.json' file is the output file from scraper.py containing mined course data from ttb.utoronto.ca/. 
+
+## Structure
+Array of course objects. Fields are inconsistent across courses - not every course has every key. All values are strings, with the exception of 'Lectures' which is an array of lecture objects containing lecture data.
+
+### Top-level keys
+['Architecture Breadth Category:', 'Arts & Science Breadth Category:', 'Availability', 'Campus', 'Co-requisites:', 'Course Name', 'Credit Value:', 'Delivery Mode', 'Department:', 'Description:', 'Engineering Elective Category:', 'Enrolment Controls', 'Exclusions:', 'Faculty / Division:', 'First Term\nDay/Time', 'First Term\nLocation', 'Instructor(s)', 'Lectures', 'Note:', 'Notes:', 'Pre-requisites:', 'Recommended Preparation:', 'Second Term\nDay/Time', 'Second Term\nLocation', 'Session', 'University of Toronto Mississauga Distribution Category:', 'University of Toronto Scarborough Breadth Category:', 'Waitlist']
+
+### Lectures (nested array within each course)
+['Availability', 'Day/Time', 'Delivery Mode', 'Enrolment Controls', 'First Term\nDay/Time', 'First Term\nLocation', 'Instructor(s)', 'Lecture Code', 'Location', 'Notes:', 'Second Term\nDay/Time', 'Second Term\nLocation', 'Waitlist']
+
+## Notes / known quirks
+- 'Note:' vs 'Notes:' - for the most part used interchangeably, but 'Notes:' is also used for changes such as a cancelled lecture
+- Trailing colons on most keys reflect the source site's raw labels
+- Some string fields may contain non-ASCII characters
+
+
+## Example Data
+
+{
+    "Course Name": "ACMC01H3 Y: ACMEE Applied Practice I",
+    "Campus": "Scarborough",
+    "Session": "Summer Full Session 2026 (Y)",
+    "Notes:": "Permission of ACM Program Manager is required. You may select this course but will not be officially enrolled until approved. Check your status through ACORN to see whether you have been approved.",
+    "Department:": "Dept. of Arts, Culture & Media (UTSC)",
+    "Faculty / Division:": "University of Toronto Scarborough",
+    "Description:": "A study of the arts, culture and/or media sector through reflective practice. Students will synthesize their classroom and work place / learning laboratory experiences in a highly focused, collaborative, and facilitated way through a series of assignments and discussions.",
+    "Pre-requisites:": "9.0 credits including VPAB16H3 and VPAB17H3 (or its equivalent with instructor permission) and successful completion of required Field Placement Preparation Activities",
+    "Co-requisites:": "Field Placement I (may be taken as a prerequisite with Program Director's permission)",
+    "Exclusions:": "None",
+    "Recommended Preparation:": "None",
+    "Note:": "This course will be graded as a CR if a student successfully completes their internship; and as NCR is the placement was unsuccessful. The NCR will impact the CGPA and count as a 0.0 CGPA value on a transcript.",
+    "University of Toronto Scarborough Breadth Category:": "Arts, Literature & Language",
+    "Credit Value:": "0.5",
+    "Lectures": [
+      {
+        "Lecture Code": "LEC01",
+        "Day/Time": "TBA",
+        "Location": "TBA",
+        "Instructor(s)": "MaryElizabeth Luka",
+        "Availability": "16 of 20",
+        "Waitlist": "0 Students",
+        "Enrolment Controls": "AR Show Explanation",
+        "Delivery Mode": "In Person"
+      }
+    ]
+  }
