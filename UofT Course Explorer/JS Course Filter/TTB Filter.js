@@ -61,7 +61,7 @@ function lectureFilterObjectMaker() {
 let course_list = [];
 async function loadCourses() {
   try {
-    const response = await fetch('../Scraped Data/Mined courses.json');
+    const response = await fetch("UofT Course Explorer/Scraped Data/Mined courses.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     course_list = await response.json();
     console.log(`Loaded ${course_list.length} courses`);
