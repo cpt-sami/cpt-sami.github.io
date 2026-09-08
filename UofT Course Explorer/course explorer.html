@@ -65,7 +65,7 @@
 </head>
 <body>
     <h1>University of Toronto Course Explorer</h1>
-
+    <h4>Ticking the checkbox makes the field match <em>exactly</em></h4>
 
     <div class="formsContainer">
 
@@ -107,16 +107,6 @@
                 <div class="fieldRow">
                     <input type="text" name="instructors" placeholder="Instructor(s)" />
                     <input type="checkbox" name="instructorsToggle" />
-                </div>
-                
-                <div class="fieldRow">
-                    <input type="text" name="firstTermDayTime" placeholder="First Term Day/Time" />
-                    <input type="checkbox" name="firstTermDayTimeToggle" />
-                </div>
-
-                <div class="fieldRow">
-                    <input type="text" name="firstTermLocation" placeholder="First Term Location" />
-                    <input type="checkbox" name="firstTermLocationToggle" />
                 </div>
 
                 <div class="fieldRow">
@@ -166,6 +156,17 @@
 
                 <details>
                     <summary>Advanced Fields</summary>
+                    
+                
+                    <div class="fieldRow">
+                        <input type="text" name="firstTermDayTime" placeholder="First Term Day/Time" />
+                        <input type="checkbox" name="firstTermDayTimeToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="firstTermLocation" placeholder="First Term Location" />
+                        <input type="checkbox" name="firstTermLocationToggle" />
+                    </div>
 
                     <div class="fieldRow">
                         <input type="text" name="secondTermDayTime" placeholder="Second Term Day/Time" />
@@ -300,6 +301,7 @@
     </div>
 
     <div id="results"></div>
+
 
     <script src = "JS Course Filter/TTB Filter.js">
     </script>
