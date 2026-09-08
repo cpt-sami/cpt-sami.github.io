@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Course Explorer Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px auto;
+            max-width: 1300px;
+        }
+        .formsContainer {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        .formColumn {
+            flex: 1;
+            max-width: 600px;
+        }
+        .fieldRow {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .fieldRow input[type="text"] {
+            flex: 1;
+            padding: 6px;
+        }
+        details {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 8px 16px;
+        }
+
+        .course-item {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            padding: 8px;
+        }
+
+        .course-item > summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lecture-item {
+            margin-left: 16px;
+            margin-top: 4px;
+            border-left: 2px solid #ddd;
+            padding-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>University of Toronto Course Explorer</h1>
+
+
+    <div class="formsContainer">
+
+        <div class="formColumn">
+            <h2>Course Filter</h2>
+
+            <form id="courseForm">
+
+                <div class="fieldRow">
+                    <input type="text" name="courseName" placeholder="Course Name" />
+                    <input type="checkbox" name="courseNameToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="department" placeholder="Department" />
+                    <input type="checkbox" name="departmentToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="facultyDivision" placeholder="Faculty / Division" />
+                    <input type="checkbox" name="facultyDivisionToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="session" placeholder="Session" />
+                    <input type="checkbox" name="sessionToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="campus" placeholder="Campus" />
+                    <input type="checkbox" name="campusToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="deliveryMode" placeholder="Delivery Mode" />
+                    <input type="checkbox" name="deliveryModeToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="instructors" placeholder="Instructor(s)" />
+                    <input type="checkbox" name="instructorsToggle" />
+                </div>
+                
+                <div class="fieldRow">
+                    <input type="text" name="firstTermDayTime" placeholder="First Term Day/Time" />
+                    <input type="checkbox" name="firstTermDayTimeToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="firstTermLocation" placeholder="First Term Location" />
+                    <input type="checkbox" name="firstTermLocationToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="creditValue" placeholder="Credit Value" />
+                    <input type="checkbox" name="creditValueToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="preRequisites" placeholder="Pre-requisites" />
+                    <input type="checkbox" name="preRequisitesToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="coRequisites" placeholder="Co-requisites" />
+                    <input type="checkbox" name="coRequisitesToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="exclusions" placeholder="Exclusions" />
+                    <input type="checkbox" name="exclusionsToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="recommendedPreparation" placeholder="Recommended Preparation" />
+                    <input type="checkbox" name="recommendedPreparationToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="description" placeholder="Description" />
+                    <input type="checkbox" name="descriptionToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="enrolmentControls" placeholder="Enrolment Controls" />
+                    <input type="checkbox" name="enrolmentControlsToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="availability" placeholder="Availability" />
+                    <input type="checkbox" name="availabilityToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="waitlist" placeholder="Waitlist" />
+                    <input type="checkbox" name="waitlistToggle" />
+                </div>
+
+                <details>
+                    <summary>Advanced Fields</summary>
+
+                    <div class="fieldRow">
+                        <input type="text" name="secondTermDayTime" placeholder="Second Term Day/Time" />
+                        <input type="checkbox" name="secondTermDayTimeToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="secondTermLocation" placeholder="Second Term Location" />
+                        <input type="checkbox" name="secondTermLocationToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="architectureBreadthCategory" placeholder="Architecture Breadth Category" />
+                        <input type="checkbox" name="architectureBreadthCategoryToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="artsScienceBreadthCategory" placeholder="Arts & Science Breadth Category" />
+                        <input type="checkbox" name="artsScienceBreadthCategoryToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="engineeringElectiveCategory" placeholder="Engineering Elective Category" />
+                        <input type="checkbox" name="engineeringElectiveCategoryToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="utmDistributionCategory" placeholder="University of Toronto Mississauga Distribution Category" />
+                        <input type="checkbox" name="utmDistributionCategoryToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="utscBreadthCategory" placeholder="University of Toronto Scarborough Breadth Category" />
+                        <input type="checkbox" name="utscBreadthCategoryToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="note" placeholder="Note" />
+                        <input type="checkbox" name="noteToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="notes" placeholder="Notes" />
+                        <input type="checkbox" name="notesToggle" />
+                    </div>
+
+                </details>
+
+                <button id="submit" type="button">Submit</button>
+
+            </form>
+        </div>
+
+        <div class="formColumn">
+            <h2>Lecture Filter</h2>
+
+            <form id="lectureForm">
+
+                <div class="fieldRow">
+                    <input type="text" name="dayTime" placeholder="Day/Time" />
+                    <input type="checkbox" name="dayTimeToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="location" placeholder="Location" />
+                    <input type="checkbox" name="locationToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="deliveryMode" placeholder="Delivery Mode" />
+                    <input type="checkbox" name="deliveryModeToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="instructors" placeholder="Instructor(s)" />
+                    <input type="checkbox" name="instructorsToggle" />
+                </div>
+
+                <div class="fieldRow">
+                    <input type="text" name="availability" placeholder="Availability" />
+                    <input type="checkbox" name="availabilityToggle" />
+                </div>
+
+                <details>
+                    <summary>Advanced Fields</summary>
+
+                    <div class="fieldRow">
+                        <input type="text" name="lectureCode" placeholder="Lecture Code" />
+                        <input type="checkbox" name="lectureCodeToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="secondTermDayTime" placeholder="Second Term Day/Time" />
+                        <input type="checkbox" name="secondTermDayTimeToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="secondTermLocation" placeholder="Second Term Location" />
+                        <input type="checkbox" name="secondTermLocationToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="notes" placeholder="Notes" />
+                        <input type="checkbox" name="notesToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="waitlist" placeholder="Waitlist" />
+                        <input type="checkbox" name="waitlistToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="firstTermDayTime" placeholder="First Term Day/Time" />
+                        <input type="checkbox" name="firstTermDayTimeToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="firstTermLocation" placeholder="First Term Location" />
+                        <input type="checkbox" name="firstTermLocationToggle" />
+                    </div>
+
+                    <div class="fieldRow">
+                        <input type="text" name="enrolmentControls" placeholder="Enrolment Controls" />
+                        <input type="checkbox" name="enrolmentControlsToggle" />
+                    </div>
+
+                </details>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div id="results"></div>
+
+    <script src = "JS Course Filter/TTB Filter.js">
+    </script>
+</body>
+</html>
