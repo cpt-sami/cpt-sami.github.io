@@ -100,6 +100,72 @@ tbody tr:nth-child(even) {
     background: #eee;
 }
 
+.recommendations {
+    margin-top: 28px;
+    padding-top: 4px;
+    border-top: 2px solid #222;
+}
+
+h2 {
+    margin: 12px 0 0;
+    font-size: 22px;
+}
+
+button {
+    min-height: 38px;
+    padding: 6px 14px;
+    border: 1px solid #222;
+    background: #bbb;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+
+.trap {
+    position: absolute;
+    left: -9999px;
+}
+
+.post-it-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 18px;
+    margin: 16px 0 0;
+    padding: 8px 4px;
+    list-style: none;
+}
+
+.post-it {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 130px;
+    padding: 16px 14px;
+    background: #fff475;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    transform: rotate(-2deg);
+    overflow-wrap: anywhere;
+}
+
+.post-it:nth-child(3n + 2) {
+    background: #ffd1dc;
+    transform: rotate(1.5deg);
+}
+
+.post-it:nth-child(3n) {
+    background: #c8f2c2;
+    transform: rotate(-0.5deg);
+}
+
+.post-it strong {
+    font-size: 18px;
+}
+
 @media (max-width: 560px) {
     body {
         padding: 8px;

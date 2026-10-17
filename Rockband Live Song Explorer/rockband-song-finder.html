@@ -38,6 +38,26 @@
                 <tbody id="song-list"></tbody>
             </table>
         </div>
+
+        <section class="recommendations">
+            <h2>Recommend a song</h2>
+
+            <form id="recommend-form">
+                <label for="recommend-song">Song</label>
+                <input id="recommend-song" name="song" type="text" maxlength="100" required>
+                <label for="recommend-artist">Artist</label>
+                <input id="recommend-artist" name="artist" type="text" maxlength="100" required>
+                <!-- Hidden from people; bots that fill it in get ignored. -->
+                <input class="trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button type="submit">Recommend</button>
+            </form>
+
+            <p id="recommend-status" role="status"></p>
+
+            <ul id="recommendation-list" class="post-it-board">
+                <li>Loading recommendations...</li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
