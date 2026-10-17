@@ -14,50 +14,56 @@
             <img class="corner-logo" src="RBL.png" alt="Rock Band Live">
         </header>
 
-        <form id="search-form" role="search">
-            <label for="search">Song or artist</label>
-            <input
-                id="search"
-                name="search"
-                type="search"
-                autocomplete="off"
-                placeholder="Start typing..."
-            >
-        </form>
+        <div class="layout">
+            <div class="finder">
+                <form id="search-form" role="search">
+                    <label for="search">Song or artist</label>
+                    <input
+                        id="search"
+                        name="search"
+                        type="search"
+                        autocomplete="off"
+                        placeholder="Start typing..."
+                    >
+                </form>
 
-        <p id="status" role="status">Loading songs...</p>
+                <p id="status" role="status">Loading songs...</p>
 
-        <div class="table-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Song</th>
-                        <th scope="col">Artist</th>
-                    </tr>
-                </thead>
-                <tbody id="song-list"></tbody>
-            </table>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Song</th>
+                                <th scope="col">Artist</th>
+                            </tr>
+                        </thead>
+                        <tbody id="song-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <section class="recommendations">
+                <h2>Recommend a song</h2>
+
+                <form id="recommend-form">
+                    <label for="recommend-song">Song</label>
+                    <input id="recommend-song" name="song" type="text" maxlength="100" required>
+                    <label for="recommend-artist">Artist</label>
+                    <input id="recommend-artist" name="artist" type="text" maxlength="100" required>
+                    <!-- Hidden from people; bots that fill it in get ignored. -->
+                    <input class="trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <button type="submit">Recommend</button>
+                </form>
+
+                <p id="recommend-status" role="status"></p>
+
+                <ul id="recommendation-list" class="post-it-board">
+                    <li>Loading recommendations...</li>
+                </ul>
+            </section>
         </div>
-
-        <section class="recommendations">
-            <h2>Recommend a song</h2>
-
-            <form id="recommend-form">
-                <label for="recommend-song">Song</label>
-                <input id="recommend-song" name="song" type="text" maxlength="100" required>
-                <label for="recommend-artist">Artist</label>
-                <input id="recommend-artist" name="artist" type="text" maxlength="100" required>
-                <!-- Hidden from people; bots that fill it in get ignored. -->
-                <input class="trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-                <button type="submit">Recommend</button>
-            </form>
-
-            <p id="recommend-status" role="status"></p>
-
-            <ul id="recommendation-list" class="post-it-board">
-                <li>Loading recommendations...</li>
-            </ul>
-        </section>
     </main>
+
+    <p class="credit">Made by Stool</p>
 </body>
 </html>
